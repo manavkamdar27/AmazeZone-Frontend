@@ -10,6 +10,16 @@ import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import ProductForm from './components/ProductForm';
 import ProductDelete from './components/ProductDelete';
+import CreditCardDelete from './components/CreditCardDelete';
+import CreditCardDetail from './components/CreditCardDetails';
+import CreditCardForm from './components/CreditCardForm';
+import CreditCardList from './components/CreditCardList';
+import TransactionDelete from './components/TransactionDelete';
+import TransactionDetail from './components/TransactionDetail';
+import TransactionList from './components/TransactionList';
+import TransactionForm from './components/TransactionForm';
+
+
 
 interface User {
 	id?: number;
@@ -60,6 +70,20 @@ const App: React.FC = () => {
 						<Route path=':id/edit' element={<ProductForm />} />
 						<Route path=':id/delete' element={<ProductDelete />} />
 					</Route>
+					<Route path='/credit_cards' element={<PrivateRoute />}>
+						<Route path='' element={<CreditCardList />} />
+						<Route path=':id' element={<CreditCardDetail />} />
+						<Route path='new' element={<CreditCardForm />} />
+						<Route path=':id/edit' element={<CreditCardForm />} />
+						<Route path=':id/delete' element={<CreditCardDelete />} />
+					</Route>
+					<Route path='/transactions' element={<PrivateRoute />}>
+						<Route path='' element={<TransactionList />} />
+						<Route path=':id' element={<TransactionDetail />} />
+						<Route path='new' element={<TransactionForm />} />
+						<Route path=':id/delete' element={<TransactionDelete />} />
+					</Route>
+
 					<Route
 						path='*'
 						element={<Home signupSuccess={signupSuccess} />}
