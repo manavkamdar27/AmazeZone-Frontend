@@ -42,6 +42,7 @@ const TransactionDelete: React.FC = () => {
 	};
 
 	return (
+		// this page was added
 		<div style={containerStyle}>
 			<h1>Delete Transaction</h1>
 			<p style={confirmationStyle}>

@@ -70,6 +70,7 @@ const App: React.FC = () => {
 						<Route path=':id/edit' element={<ProductForm />} />
 						<Route path=':id/delete' element={<ProductDelete />} />
 					</Route>
+					{/* This part is modified */}
 					<Route path='/credit_cards' element={<PrivateRoute />}>
 						<Route path='' element={<CreditCardList />} />
 						<Route path=':id' element={<CreditCardDetail />} />

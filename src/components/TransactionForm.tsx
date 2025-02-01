@@ -81,6 +81,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ flexDirection }) => {
 
 	useEffect(() => {
 		// total cost is updated every time a product or quantity is changed
+		// The price factor is modied, the original company didn't work 
 		const price = transaction.product_id ? productMap[transaction.product_id].price : 0;
 		setTransaction({ ...transaction, total_cost: (transaction.quantity) * (price) });
 	}, [transaction.product_id, transaction.quantity])

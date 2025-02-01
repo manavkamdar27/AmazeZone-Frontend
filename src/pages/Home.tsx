@@ -87,6 +87,7 @@ const Home: React.FC<Props> = ({ signupSuccess }) => {
 				>
 					Sign Up
 				</Link>
+				
 			</div>
 		</div>
 	);
